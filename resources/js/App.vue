@@ -1,15 +1,30 @@
 <template>
+
+
   <div>
-      <h1>Home vue</h1>
+      <Header />
+      <main>
+          main
+      </main>
+      <Footer />
   </div>
+
 </template>
 
 <script>
+import Header from './components/partials/Header';
+import Footer from './components/partials/Footer';
+
 export default {
-    name: "App"
+    name: "App",
+
+    components:{
+        Header,
+        Footer
+    }
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
