@@ -3,9 +3,7 @@
 
   <div>
       <Header />
-      <main>
-          main
-      </main>
+      <Posts />
       <Footer />
   </div>
 
@@ -14,13 +12,15 @@
 <script>
 import Header from './components/partials/Header';
 import Footer from './components/partials/Footer';
+import Posts from './components/Posts';
 
 export default {
     name: "App",
 
     components:{
         Header,
-        Footer
+        Footer,
+        Posts
     }
 }
 </script>

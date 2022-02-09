@@ -1,0 +1,54 @@
+<template>
+<article>
+    <h3>
+        <a href="#">{{post.title}}</a>
+    </h3>
+    <p class="date"> {{formatDate}} </p>
+    <p>{{truncateText}}</p>
+</article>
+</template>
+
+<script>
+export default {
+    name: 'PostItem',
+    props:{
+        'post': Object
+    },
+    computed:{
+        truncateText(){
+            return this.post.content.substr(0, 50) + '...';
+        },
+
+        formatDate(){
+            const d = new Date(this.post.created_at);
+            let day = d.getDate();
+            let month = d.getMonth() + 1;
+            const year = d.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+
+article{
+    margin: 10px;
+    .date{
+        font-size: 12px;
+        font-style: italic;
+    }
+    .testo{
+        padding: 10px 0px;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+        &:hover{
+            color: red;
+        }
+    }
+}
+
+</style>
