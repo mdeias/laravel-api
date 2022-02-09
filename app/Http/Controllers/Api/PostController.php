@@ -12,7 +12,7 @@ class PostController extends Controller
 
         $posts = Post::all();
 
-        return response()->json($posts);
+        return response()->json(compact('posts'));
 
     }
 }

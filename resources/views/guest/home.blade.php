@@ -8,9 +8,11 @@
     <title>Guest</title>
 </head>
 <body>
-    <div id="app">
 
+    <div id="app">
+        
     </div>
+
     <script src="{{ asset('js/guest.js') }}"></script>
 </body>
 </html>
