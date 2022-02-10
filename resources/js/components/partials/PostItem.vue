@@ -3,6 +3,22 @@
     <h3>
         <a href="#">{{post.title}}</a>
     </h3>
+    <p
+    class="category"
+    v-if="post.category"
+    >{{ post.category.name }}</p>
+
+    <div v-if="post.tags">
+        
+        <span
+        v-for="(tag, index) in post.tags"
+        :key="`tag${index}`"
+        >
+        {{tag.name}}
+        </span>
+
+    </div>
+
     <p class="date"> {{formatDate}} </p>
     <p>{{truncateText}}</p>
 </article>
@@ -50,6 +66,14 @@ article{
         &:hover{
             color: red;
         }
+    }
+    span{
+        background-color: orange;
+        display: inline-block;
+        margin: 5px 5px 5px 0px;
+        padding: 3px 7px;
+        font-size: 9px;
+        border-radius: 15px;
     }
 }
 

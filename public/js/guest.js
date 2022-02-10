@@ -2094,6 +2094,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'PostItem',
   props: {
@@ -2186,7 +2202,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "article[data-v-49c43f95] {\n  margin: 10px;\n}\narticle .date[data-v-49c43f95] {\n  font-size: 12px;\n  font-style: italic;\n}\narticle .testo[data-v-49c43f95] {\n  padding: 10px 0px;\n}\narticle a[data-v-49c43f95] {\n  color: black;\n  text-decoration: none;\n}\narticle a[data-v-49c43f95]:hover {\n  color: red;\n}", ""]);
+exports.push([module.i, "article[data-v-49c43f95] {\n  margin: 10px;\n}\narticle .date[data-v-49c43f95] {\n  font-size: 12px;\n  font-style: italic;\n}\narticle .testo[data-v-49c43f95] {\n  padding: 10px 0px;\n}\narticle a[data-v-49c43f95] {\n  color: black;\n  text-decoration: none;\n}\narticle a[data-v-49c43f95]:hover {\n  color: red;\n}\narticle span[data-v-49c43f95] {\n  background-color: orange;\n  display: inline-block;\n  margin: 5px 5px 5px 0px;\n  padding: 3px 7px;\n  font-size: 9px;\n  border-radius: 15px;\n}", ""]);
 
 // exports
 
@@ -3581,6 +3597,24 @@ var render = function () {
     _c("h3", [
       _c("a", { attrs: { href: "#" } }, [_vm._v(_vm._s(_vm.post.title))]),
     ]),
+    _vm._v(" "),
+    _vm.post.category
+      ? _c("p", { staticClass: "category" }, [
+          _vm._v(_vm._s(_vm.post.category.name)),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.post.tags
+      ? _c(
+          "div",
+          _vm._l(_vm.post.tags, function (tag, index) {
+            return _c("span", { key: "tag" + index }, [
+              _vm._v("\n        " + _vm._s(tag.name) + "\n        "),
+            ])
+          }),
+          0
+        )
+      : _vm._e(),
     _vm._v(" "),
     _c("p", { staticClass: "date" }, [
       _vm._v(" " + _vm._s(_vm.formatDate) + " "),
