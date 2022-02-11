@@ -3,7 +3,7 @@
 
     <div class="container">
 
-        <h1>POST</h1>
+        <h1>POSTS</h1>
 
         <PostItem 
             v-for="post in posts"
@@ -37,7 +37,7 @@
 
 <script>
 
-import PostItem from './partials/PostItem.vue';
+import PostItem from '../partials/PostItem.vue';
 
 
 export default {
@@ -83,7 +83,7 @@ main{
         margin-bottom: 20px;
     }
     button{
-        margin: 10px 2px;
+        margin: 10px 2px 40px 2px;
         padding: 5px 7px;
     }
 }

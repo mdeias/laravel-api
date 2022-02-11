@@ -4,9 +4,9 @@
         <a href="#">{{post.title}}</a>
     </h3>
     <p
-    class="category"
-    v-if="post.category"
-    >{{ post.category.name }}</p>
+    class="category">
+    {{ post.category.name }}
+    </p>
 
     <div v-if="post.tags">
         
